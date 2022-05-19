@@ -1,0 +1,916 @@
+/*
+	Template Name: FoodBite
+	Author: Themeturn
+	Author URI: 
+	Description: 
+	Version: 1.0
+*/
+
+
+/* Table of Content
+==================================================
+1.	Global Styles
+2. 	Typography
+3.	Common styles
+4.	SECTION header 
+5.	Main slider
+6.	section-welcome
+7.	SECTION ABOUT
+8.	SECTION service
+9.	SECTION EVENTS
+10. SECTION TESTIMONIAL
+11.	SECTION CONTACT
+12.	SECTION FOOTER
+
+*/
+
+
+/* 1 - Google Font
+------------------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap');
+/* quattrocento-sans-regular - latin */
+@font-face {
+  font-family: 'Quattrocento Sans';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/quattrocento-sans-v17-latin-regular.eot'); /* IE9 Compat Modes */
+  src:
+       url('../fonts/quattrocento-sans-v17-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/quattrocento-sans-v17-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/quattrocento-sans-v17-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/quattrocento-sans-v17-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/quattrocento-sans-v17-latin-regular.svg#QuattrocentoSans') format('svg'); /* Legacy iOS */
+}
+
+
+/* 2 - General styles
+------------------------------------------------------------------------*/
+
+html,
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #666666;
+}
+
+html {
+	overflow-x: hidden !important;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	-webkit-font-smoothing: antialiased;
+}
+
+body {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+	background: #fff;
+}
+
+a {
+	color: #555;
+	-webkit-transition: color .2s ease;
+	-moz-transition: color .2s ease;
+	-ms-transition: color .2s ease;
+	-o-transition: color .2s ease;
+	transition: color .2s ease;
+}
+
+a:focus {
+	outline: none;
+	outline-offset: 0;
+}
+
+a:link,
+a:visited,
+a:hover {
+	text-decoration: none;
+}
+
+p {
+	color: #808080;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 25px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	width: 100%;
+}
+
+iframe,
+audio {
+	width: 100%;
+	height: auto;
+	border: none;
+}
+
+ul {
+	list-style-type: none;
+}
+
+a:hover {
+	color: #F53700;
+	text-decoration: none;
+	transition: all 0.25s ease 0s;
+	-moz-transition: all 0.25s ease 0s;
+	-webkit-transition: all 0.25s ease 0s;
+	-o-transition: all 0.25s ease 0s;
+}
+
+
+/* 2.1 - Headings 
+--------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: #333;
+	font-weight: 700;
+	text-transform: capitalize;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+	font-size: 2.5em;
+}
+
+h2 {
+	font-size: 2.125em;
+}
+
+h3 {
+	font-size: 1.75em;
+}
+
+h4 {
+	font-size: 1.375em;
+}
+
+h5 {
+	font-size: 1.125em;
+}
+
+h6 {
+	font-size: 0.875em;
+}
+
+
+/* Common button styles */
+
+
+/* General button style (reset) */
+
+.btn {
+	border: none;
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	background: none;
+	cursor: pointer;
+	padding: 20px 80px;
+	display: inline-block;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	outline: none;
+	position: relative;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+	font-size: 14px;
+}
+
+.btn-primary,
+.btn-default {
+	margin-top: 30px;
+}
+
+.btn-primary {
+	border: 1px solid#ddd;
+	font-size: 12px;
+	padding: 13px 30px!important;
+	letter-spacing: 0px;
+	color: #999;
+	-webkit-transition: all .4s ease 0s;
+	-o-transition: all .4s ease 0s;
+	transition: all .4s ease 0s;
+}
+
+.btn-primary:hover {
+	border-color: #2e2e2e;
+	background: #2e2e2e;
+	color: #fff!important;
+}
+
+.btn-primary.black {
+	border: 1px solid#2e2e2e;
+	background: #2e2e2e;
+	color: #fff!important;
+}
+
+.btn-primary.black:hover {
+	border-color: #f53700;
+	background: #f53700;
+	color: #fff!important;
+}
+
+.btn-primary.feature {
+	border: 1px solid#f53700;
+	background: #f53700;
+	color: #fff;
+}
+
+.btn-primary.feature:hover {
+	border: 1px solid#fff;
+	background: #fff;
+	color: #f53700!important;
+}
+
+.btn-primary-header {
+    position:absolute; 
+    margin-left:-50px;
+    left:50%;
+    width:100px;
+    bottom:0px;
+    border: 1px solid#ddd;
+	font-size: 12px;
+	padding: 13px 30px!important;
+	letter-spacing: 0px;
+	color: #999;
+}
+
+.btn-primary-header.feature {
+    border: 1px solid#f53700;
+	background: #f53700;
+	color: #fff;
+}
+
+.btn-primary-header.feature:hover {
+    border: 1px solid#fff;
+	background: #fff;
+	color: #f53700!important;
+}
+
+.boxContainer {
+    display: table;
+}
+.box {
+    width: 100%;
+    height: auto;
+    background: #0088cc;
+    padding: 2%;
+    position: relative;
+    display: table-cell;
+    text-align: center;
+    vertical-align: bottom;
+}
+
+/*====================================================
+	Main styles
+ =======================================================*/
+
+.section-padding {
+	padding: 90px 0px;
+}
+
+.section-heading {
+	margin-bottom: 50px;
+}
+
+.section-heading h2 {
+	margin-top: 0px;
+}
+
+.section-heading h3 {
+	font-family: 'Quattrocento Sans';
+	font-weight: 400;
+	margin-top: 0px;
+	color: #f53700;
+}
+
+.section-heading p {
+	width: 60%;
+	margin: 15px auto 0px;
+}
+
+
+/*=======================================
+	SECTION header 
+=====================================*/
+
+.page-top {
+	padding: 10px 10px 5px;
+	border-bottom: 1px solid#eee;
+}
+
+.f-left {
+	float: left;
+}
+
+.f-right {
+	float: right;
+}
+
+.f-right p {
+	color: #8c8c8c;
+}
+
+.f-right p span {
+	color: #333;
+	font-weight: 700;
+}
+
+#section-header {
+	background: #fff;
+}
+
+.navbar-nav li a {
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 24px;
+	padding: 33px 20px;
+	color: #333;
+	background: transparent!important;
+	font-weight: 600;
+	letter-spacing: 1px;
+}
+
+.navbar {
+	border: 0px none;
+	float: none;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	min-height: auto;
+	padding-left: 20px;
+	position: relative;
+	z-index: 777;
+	border-radius: 0px;
+}
+
+.navbar-main .navbar-nav a:hover {
+	color: #4668FF;
+	background: transparent;
+}
+
+.navbar-brand {
+	width: 110%;
+	height: 60px;
+	padding-left: 0px;
+	line-height: 60px;
+	margin-top: 8.5px;
+}
+
+.navbar-brand a span {
+	color: #F53700;
+}
+
+.sticky-wrapper.is-sticky #section-header {
+	width: 100%;
+	z-index: 999;
+	box-shadow: 0px 0px 2px #777;
+}
+
+#section-header-sticky-wrapper .navbar-nav li a:hover,
+#section-header-sticky-wrapper .navbar-nav li.active a {
+	color: #f53700;
+}
+
+
+/*=================================================================
+	Main slider
+======================================================================*/
+.dropmenu{
+    padding: 5px 14px !important;
+}
+
+.uppermenu{
+        right: -65px !important;
+        top: 67px !important;
+}
+.footermenu{
+        right: -65px !important;
+        top: -110px !important;
+}
+.parallax {
+  background-image: url("../images/bg/gray_background_image.png");
+
+  /* Set a specific height */
+  min-height: 590px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 50px;
+}
+#section-banner {
+	position: relative;
+	background-attachment: fixed !important;
+	background: url("../images/bg/gray_background_image.png") 50% 50%;
+	background-size: cover;
+	padding: 290px 0px;
+}
+
+@media screen and (max-width: 500px) {
+ #section-banner {
+	position: relative;
+	background-attachment: inherit !important;
+	background: url("../images/bg/gray_background_image.png") 50% 50%;
+	background-size: cover;
+	padding: 130px 0px;
+}
+.uppermenu {
+    right: 147px !important;
+    top: 44px !important;
+}
+}
+.banner-caption {
+	padding: 20px 40px 40px;
+	width: 70%;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.banner-caption h2 {
+	line-height: 40px;
+	color: #fff;
+	font-family: 'Quattrocento Sans';
+	font-size: 50px;
+}
+
+.banner-caption p {
+	color: #ddd;
+	margin: 45px 0px 10px;
+}
+
+.banner-title span {
+	color: #f53700;
+}
+
+.banner-caption i {
+	font-size: 60px;
+	color: #fff;
+	border: 1px solid#fff;
+	width: 100px;
+	height: 100px;
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+	border-radius: 100%;
+	margin-bottom: 15px;
+	padding-top: 10px;
+}
+
+
+/*=======================================================
+ 	section-welcome
+=========================================================*/
+
+.heading-content {
+	margin: 0px 0px 100px;
+	text-align: center;
+}
+
+
+/*=======================================================
+ 	SECTION ABOUT
+=========================================================*/
+
+.section-title {
+	line-height: 30px;
+	margin-top: 10px;
+	margin-bottom: 25px;
+}
+
+.about-content {
+	padding-top: 48px;
+}
+
+.about-content h4 {
+	margin-bottom: 0px;
+	font-weight: normal;
+	font-size: 16px;
+	color: #F53700;
+}
+
+#section-feature {
+	padding: 40px 0px;
+	background: #f9f9f9;
+}
+
+.feature-box {
+	text-align: center;
+}
+
+.feature-box a {
+	font-size: 35px;
+	line-height: 35px;
+	width: 80px;
+	height: 80px;
+	background: #F53700;
+	color: #fff;
+	display: block;
+	border-radius: 100%;
+	padding-top: 20px;
+	margin: 0 auto 20px;
+	position: relative;
+}
+
+
+/*========================================================
+	SECTION PARALLAX
+=========================================================*/
+
+#section-parallax {
+	background: url("../images/bg/paralax.jpg") fixed 50% 50%;
+	-webkit-background-size: cover;
+	background-size: cover;
+	padding: 70px 0px;
+}
+
+.paralax-content h3 {
+	color: #fff;
+	font-weight: 400;
+	font-family: 'Raleway', sans-serif;
+}
+
+.paralax-content h2 {
+	color: #fff;
+	font-style: italic;
+}
+
+
+/*========================================================
+	SECTION SERVICES
+=========================================================*/
+
+#section-services {
+	padding-bottom: 0px;
+}
+
+.service-box {
+	margin-bottom: 10px;
+}
+
+.service-img img {
+	max-width: 100%;
+	margin: 0 auto;
+	width: 45%;
+	float: left;
+	margin-right: 20px;
+}
+
+.service-content {
+	padding: 20px;
+}
+
+
+/*========================================================
+	SECTION TESTIMONIAL
+=========================================================*/
+
+#section-testi {
+/*    background: url("../images/bg/gray_background_image.png") fixed 50% 50%;
+	background-size: cover;*/
+	background: #fff;
+	padding-bottom: 50px;
+}
+
+#testimonial-carousel {}
+
+#testimonial-carousel .item .testimonail-caption {
+	text-align: center;
+	width: 60%;
+	margin: 0 auto;
+}
+
+#testimonial-carousel .item i {
+	font-size: 40px;
+/*	background: #fff;*/
+    background: #b3b3b3;
+	width: 80px;
+	height: 80px;
+	text-align: center;
+	padding-top: 20px;
+	border-radius: 100%;
+	color: #f53700;
+}
+
+#testimonial-carousel .item p {
+	margin: 40px 0px;
+/*	color: #fff;*/
+    color: #404040;
+	font-size: 16px;
+	line-height: 28px;
+	font-style: italic;
+}
+
+.test-content h3 {
+/*	color: #fff;*/
+    color: #404040;
+	font-family: 'Quattrocento Sans';
+}
+
+.test-content {
+	padding-bottom: 60px;
+}
+
+
+/*========================================================
+	SECTION MENU
+=========================================================*/
+
+#menu-tab {}
+
+#menu-tab {
+	margin-bottom: 60px;
+}
+
+.nav-tabs {
+	border: none;
+	width: 31%;
+	margin: 0 auto;
+}
+
+.nav-tabs > li > a,
+.nav-tabs > li.active > a {
+	border: 1px solid#eee;
+	border-radius: 0px;
+	margin-right: 10px;
+	border-bottom: 1px solid#ddd;
+	padding: 10px 26px;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover {
+	background: #F53700;
+	color: #fff;
+	border: 1px solid #F53700;
+	font-weight: 700;
+}
+
+.menu-item {
+	padding-bottom: 30px;
+	border-bottom: 1px solid#eee;
+}
+
+.menu-item img {
+	float: left;
+	margin-right: 15px;
+	width: 40%;
+	background: #fff;
+}
+
+.menu-inner {
+	padding-top: 30px;
+}
+
+.menu-inner h4 {
+	padding-bottom: 15px;
+	display: block;
+	font-family: 'Quattrocento Sans';
+	font-size: 22px;
+	line-height: 32px;
+}
+
+.menu-inner h4 span {
+	margin-left: 20px;
+	background: #fff;
+	display: inline-block;
+	text-align: center;
+	line-height: 35px;
+	color: #F53700;
+	font-size: 40px;
+	float: right;
+}
+
+
+.revh3{
+    font-family: 'Quattrocento Sans';
+    font-weight: 400;
+    margin-top: 0px;
+    color: #fff;
+    margin: 2%;
+}
+
+/*========================================================
+	SECTION RESERVATION
+=========================================================*/
+
+#section-reservation {
+	background-color: #BEBEBE;
+	background-size: cover;
+}
+#section-rev{
+    /*background: url("../images/bg/gray_background_image.png") fixed 50% 50%;*/
+    background-color: #BEBEBE;
+	background-size: cover;
+}
+
+#section-reservation .section-heading h2 {
+	color: #fff;
+}
+
+
+
+.h4under{
+    border-bottom:2px dotted #777;
+}
+.h3under{
+    font-family: 'Quattrocento Sans';
+    font-weight: 400;
+    margin-top: 0px;
+    color: #f53700;
+    border-bottom:2px solid #F53700;
+}
+
+#section-reservation .section-heading p {
+	color: #eee;
+}
+
+#contact-form {
+	width: 80%;
+	margin: 0 auto;
+}
+
+
+.contact-form-wrap {
+	-webkit-transition: all .4s ease 0s;
+	-o-transition: all .4s ease 0s;
+	transition: all .4s ease 0s;
+	background: #fff;
+	padding: 20px 10px;
+	border-radius: 3px;
+}
+
+#contact-form .form-control {
+	border-radius: 0px;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	border: 1px solid#ddd;
+	min-height: 45px;
+}
+
+#contact-form .form-group {
+	margin-bottom: 25px;
+}
+
+.form-control:hover,
+.form-control:focus {
+	border-color: #e1e1e1;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.contact-form-field:focus {
+	background: #F5F5F5;
+}
+
+.contact-form-field {
+	border-radius: 2px;
+	color: #444;
+	font-family: "Muli", sans-serif;
+	font-size: 13px;
+	padding-left: 26px;
+	line-height: 20px;
+	-webkit-transition: all .5s ease-in-out 0s;
+	-o-transition: all .5s ease-in-out 0s;
+	transition: all .5s ease-in-out 0s;
+}
+
+.contact-box.contact-page {
+	padding: 5px;
+	margin-bottom: 25px;
+}
+
+
+/*========================================================
+	SECTION EVENTS
+=========================================================*/
+
+.event-content {
+	margin-top: 30px;
+	text-align: center;
+}
+
+.event-content h4 {
+	margin-bottom: 15px;
+	font-weight: 600;
+}
+
+
+/*========================================================
+	SECTION CONTACT
+=========================================================*/
+
+#section-contact {
+	background: #e8e8e8;
+	padding: 40px 0px;
+}
+
+#contact-form .btn{
+	margin-top: 0px;
+}
+/*========================================================
+	SECTION FOOTER
+=========================================================*/
+.logo{
+	width: auto;
+}
+#section-footer {
+	background: #F6F6F6;
+	padding: 90px 0px 80px;
+}
+
+.footer-content p {
+	margin: 20px 0px;
+	color: #444;
+}
+
+.footer-social li a i {
+	color: #474747;
+	font-size: 20px;
+}
+
+.footer-contact ul li {
+	padding: 10px 0px;
+	display: flex;
+	align-items: right;
+    justify-content: right;
+}
+
+.footer-contact ul li a {
+	text-transform: uppercase;
+	font-size: 14px;
+	color: #333;
+}
+
+.footer-contact ul li a i {
+	margin-right: 15px;
+	color: #333;
+	font-size: 16px;
+}
+
+.footer-widget li {
+	width: 32%;
+}
+
+#footer-btm {
+	padding: 25px 0px 20px;
+}
+
+.copy {
+	color: #222;
+	text-transform: uppercase;
+}
+
+.footer-menu li a {
+	text-transform: uppercase;
+	color: #222;
+}
+
+
+/*BAck to TOP
+=====================*/
+
+#back-to-top {
+	right: 40px;
+	top: auto;
+	z-index: 1;
+	-webkit-backface-visibility: hidden;
+}
+
+#back-to-top.affix {
+	bottom: 60px;
+}
+
+#back-to-top .btn.btn-primary {
+	padding: 0;
+	font-size: 18px;
+	width: 41px !important;
+	height: 36px !important;
+	background: rgba(0, 0, 0, 0.5) none repeat scroll 0% 0%;
+	border: 2px solid transparent;
+	color: #FFF;
+	padding: 0px !important;
+	opacity: .5;
+}
+
+#back-to-top .btn.btn-primary:hover {
+	color: #fff;
+	opacity: 1;
+	background: #f53700;
+}
